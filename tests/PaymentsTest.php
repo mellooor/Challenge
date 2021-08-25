@@ -149,21 +149,21 @@ class PaymentsTest extends TestCase
      */
     private function getPaymentsSQLQuery(): string
     {
-        $query = 'SELECT';
-        $query .= 'pl.plan_id, pc.pc_title, pc.pc_first_name, pc.pc_last_name, u.user_first_name, u.user_last_name, c.company_name';
-        $query .= 'FROM';
-        $query .= 'plan pl';
-        $query .= 'INNER JOIN plan_client pc ON pl.plan_id = pc.pc_plan_id';
-        $query .= 'INNER JOIN user u ON pl.plan_lead_gen = u.user_id';
-        $query .= 'INNER JOIN company c ON u.user_company = c.company_id';
-        $query .= 'INNER JOIN payment pay ON pl.plan_id = pay.payment_plan';
-        $query .= 'WHERE';
-        $query .= 'pay.payment_status = ?';
-        $query .= 'AND';
-        $query .= '(';
-        $query .= 'pay.payment_due_date > ?';
-        $query .= 'AND';
-        $query .= 'pay.payment_due_date < ?';
+        $query = 'SELECT ';
+        $query .= 'pl.plan_id, pc.pc_title, pc.pc_first_name, pc.pc_last_name, u.user_first_name, u.user_last_name, c.company_name ';
+        $query .= 'FROM ';
+        $query .= 'plan pl ';
+        $query .= 'INNER JOIN plan_client pc ON pl.plan_id = pc.pc_plan_id ';
+        $query .= 'INNER JOIN user u ON pl.plan_lead_gen = u.user_id ';
+        $query .= 'INNER JOIN company c ON u.user_company = c.company_id ';
+        $query .= 'INNER JOIN payment pay ON pl.plan_id = pay.payment_plan ';
+        $query .= 'WHERE ';
+        $query .= 'pay.payment_status = ? ';
+        $query .= 'AND ';
+        $query .= '( ';
+        $query .= 'pay.payment_due_date > ? ';
+        $query .= 'AND ';
+        $query .= 'pay.payment_due_date < ? ';
         $query .= ')';
 
         return $query;
