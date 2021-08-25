@@ -83,6 +83,6 @@ class Payments extends DBAction
         // Convert the DateTime objects into date strings in a MySql-friendly format.
         $pdo->execute([$status, $startDate->format('Y-m-d'), $endDate->format('Y-m-d')]);
 
-        return $pdo->fetchAll();
+        return $pdo->fetchAll(PDO::FETCH_OBJ);
     }
 }
