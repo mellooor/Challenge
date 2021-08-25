@@ -14,14 +14,14 @@ class Payments extends DBAction
      *
      * @var PaymentStatusValidator
      */
-    private $paymentStatusValidator;
+    private PaymentStatusValidator $paymentStatusValidator;
 
     /**
      * The payment due dates validator that will validate the provided status parameter in getPayments().
      *
      * @var PaymentDueDatesValidator
      */
-    private $paymentDueDatesValidator;
+    private PaymentDueDatesValidator $paymentDueDatesValidator;
 
     /**
      * Set up the payment status and payment due date validators.

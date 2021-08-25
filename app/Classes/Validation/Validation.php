@@ -8,5 +8,5 @@ abstract class Validation
 {
     private $rules;
 
-    abstract public function validate(array $args);
+    abstract public function validate(array $args): bool;
 }

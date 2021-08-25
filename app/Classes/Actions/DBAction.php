@@ -7,7 +7,7 @@ use PDO;
 
 abstract class DBAction
 {
-    protected $dbConnection;
+    protected PDO $dbConnection;
 
     public function __construct(PDO $dbConnection)
     {

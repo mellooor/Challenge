@@ -13,7 +13,7 @@ class PaymentStatusValidator extends Validation
      *
      * @var array
      */
-    private $allowedStatusValues = [
+    private array $allowedStatusValues = [
         'pending',
         'paid',
         'failed'

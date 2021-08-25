@@ -5,10 +5,10 @@ use App\PDO\Parameters;
 
 class PDOParametersTest extends TestCase
 {
-    private $dsn;
-    private $user;
-    private $pass;
-    private $options;
+    private string $dsn;
+    private string $user;
+    private string $pass;
+    private array $options;
 
     /**
     *  Set up the dsn, user, pass and options parameters that will be used in the tests.

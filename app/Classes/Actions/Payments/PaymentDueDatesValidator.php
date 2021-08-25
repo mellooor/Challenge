@@ -10,8 +10,20 @@ use App\DateTime\DateDurationCalculator;
 
 class PaymentDueDatesValidator extends Validation
 {
-    private $dateDurationCalc;
+    /**
+     * The DateDurationCalculator class instance that is to be used in the validate() method.
+     *
+     * @var DateDurationCalculator
+     */
+    private DateDurationCalculator $dateDurationCalc;
 
+    /**
+     * Set the dateDurationCalc parameter during construction.
+     *
+     * @param DateDurationCalculator $dateDurationCalc - The DateDurationCalculator instance that is to be used in the validate() method.
+     *
+     * @return void
+     */
     public function __construct(DateDurationCalculator $dateDurationCalc)
     {
         $this->dateDurationCalc = $dateDurationCalc;

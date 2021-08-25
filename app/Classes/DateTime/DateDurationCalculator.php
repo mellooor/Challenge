@@ -2,7 +2,7 @@
 
 namespace App\DateTime;
 
-use \DateInterval;
+use DateInterval;
 
 class DateDurationCalculator
 {
@@ -12,7 +12,7 @@ class DateDurationCalculator
      * @param DateInterval $dateInterval - The date interval to be formatted.
      * @return int - The difference between the 2 dates. Will return minus values if the first date occurs later than the second date.
      */
-    public function calculateDays(DateInterval $dateInterval)
+    public function calculateDays(DateInterval $dateInterval):  int
     {
         return intval($dateInterval->format('%r%d'));
     }
