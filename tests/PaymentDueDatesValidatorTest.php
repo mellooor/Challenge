@@ -264,6 +264,7 @@ class PaymentDueDatesValidatorTest extends TestCase
     {
       $date->expects($this->exactly($numCalls))
         ->method('diff')
+        ->with($otherDate)
         ->willReturn($returnValue);
     }
 
