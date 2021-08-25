@@ -39,15 +39,9 @@ html, body {
     width: 90%;
     height: 50%;
     margin: 0 auto;
-    border: 0px solid #f1a520;
-}
-
-#failed-payments-table tr {
-    border-bottom: 0px solid #f1a520;
 }
 
 #failed-payments-table th, #failed-payments-table td {
-    border-bottom: 0px solid #f1f1f1;
     text-align: center;
 }
 
