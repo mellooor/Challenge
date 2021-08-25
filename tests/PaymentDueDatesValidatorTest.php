@@ -274,11 +274,11 @@ class PaymentDueDatesValidatorTest extends TestCase
      * @param MockObject $dateDurationCalc - The mock DateDurationCalculator instance that the method will be set up for.
      * @param int $numCalls - The number of calls that are expected to be made to the mock method.
      * @param DateInterval $calculateDaysArgument - The argument that the mock method expects to receive.
-     * @param string $returnValue - The response that is expected when the DateDurationCalculator calculateDays() method runs successfully.
+     * @param int $returnValue - The response that is expected when the DateDurationCalculator calculateDays() method runs successfully.
      *
      * @return void
      */
-    private function setUpMockDateDurationCalculatorCalculateDaysMethod(MockObject $dateDurationCalc, int $numCalls, DateInterval $calculateDaysArgument, string $returnValue)
+    private function setUpMockDateDurationCalculatorCalculateDaysMethod(MockObject $dateDurationCalc, int $numCalls, DateInterval $calculateDaysArgument, int $returnValue)
     {
         $dateDurationCalc->expects($this->exactly($numCalls))
             ->method('calculateDays')
