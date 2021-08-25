@@ -38,7 +38,7 @@ class MySqlDriver extends Driver
      *
      * @return PDO | array - The fresh (or already-existing) instance of the PDO class if successful, an error array if an issue occurs.
      */
-    protected function connect():   PDO|array
+    public function connect():   PDO|array
     {
         if (isset($this->pdoConnection))
         {
