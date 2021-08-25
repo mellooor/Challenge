@@ -1,7 +1,7 @@
 <?php
-use \App\PDO\Parameters as PdoParameters;
-use \App\DB\MySqlDriver;
-use \App\DB\MysqlDsnString;
+use App\PDO\Parameters as PdoParameters;
+use App\DB\MySqlDriver;
+use App\DB\MysqlDsnString;
 
 // The DB parameters are loaded from the config file
 $dbConfig = require_once(dirname(__DIR__) . '/config/db.php');
